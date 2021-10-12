@@ -20,9 +20,10 @@ export default class CountdownTimer {
       const time = this.getTimeComponents(this._time - Date.now());
       this.insertValues(time);
     }, 1000);
-  }
+    }
 
   getTimeComponents(time) {
+    if (time >= 0) {
     const days = this.pad(Math.floor(time / (1000 * 60 * 60 * 24)));
     const hours = this.pad(
       Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
@@ -31,6 +32,7 @@ export default class CountdownTimer {
     const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
 
     return { days, hours, mins, secs };
+    }
   }
 
   pad(value) {
