@@ -44,5 +44,5 @@ this.timeFinish(time);
 };
 new CountdownTimer({
   selector: "#timer-1",
-  targetDate: new Date("Oct 12, 2021, 22:00:00"),
+  targetDate: new Date("Dec 31, 2021"),
 });
