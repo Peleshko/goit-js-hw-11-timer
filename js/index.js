@@ -38,11 +38,11 @@ this.timeFinish(time);
   timeFinish(time) {
     if (time < 0) {
       clearInterval(this.setInt);
-     // refs.timerFace.textContent = "HAPPY NEW YEAR!!!";
+      refs.timerFace.textContent = "HAPPY NEW YEAR!!!";
     }
   }
 };
 new CountdownTimer({
   selector: "#timer-1",
-  targetDate: new Date("Dec 31, 2021, 23:59:00"),
+  targetDate: new Date("Oct 12, 2021, 21:53:00"),
 });
